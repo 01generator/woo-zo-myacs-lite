@@ -1,0 +1,611 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MyACS Lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-04 08:02+0000\n"
+"PO-Revision-Date: 2026-03-04 08:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: Ελληνικά\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.2; wp-6.9.1; php-8.2.27\n"
+"X-Domain: woo-zo-myacs-lite"
+
+#. Author of the plugin
+msgid "01generator"
+msgstr "01generator"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:83
+msgid "A4"
+msgstr "A4"
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:99
+msgid "ACS credentials are not configured yet."
+msgstr "Τα διαπιστευτήρια ACS δεν έχουν ρυθμιστεί ακόμα."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:356
+msgid "ACS did not return a printable pickup list."
+msgstr "Η ACS δεν επέστρεψε εκτυπώσιμη λίστα παραλαβής."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:617
+msgid "ACS did not return a voucher number."
+msgstr "Το ACS δεν επέστρεψε αριθμό παραστατικού."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:665
+msgid "ACS did not return printable PDF data."
+msgstr "Το ACS δεν επέστρεψε εκτυπώσιμα δεδομένα PDF."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:780
+msgid "ACS did not return tracking data for this voucher."
+msgstr ""
+"Το ACS δεν επέστρεψε δεδομένα παρακολούθησης για το εν λόγω παραστατικό."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:704
+msgid "ACS returned invalid PDF data."
+msgstr "Το ACS επέστρεψε άκυρα δεδομένα PDF."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:70
+msgid "API Key"
+msgstr "Κλειδί API"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:69
+msgid "API Password"
+msgstr "Κωδικός πρόσβασης API"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:68
+msgid "API Username"
+msgstr "Όνομα χρήστη API"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:87
+msgid "Are you sure you want to cancel this voucher?"
+msgstr "Είστε σίγουροι ότι θέλετε να ακυρώσετε αυτό το κουπόνι"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:86
+#, php-format
+msgid "Are you sure you want to cancel voucher #%s?"
+msgstr "Είστε σίγουρος ότι θέλετε να ακυρώσετε το κουπόνι #%s"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:182
+msgid "Automatic + Manual"
+msgstr "Αυτόματο + Χειροκίνητο"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:180
+msgid "Automatic PDF Cleanup"
+msgstr "Αυτόματος καθαρισμός PDF"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:168
+msgid "Automatic Status Changes"
+msgstr "Αυτόματες αλλαγές κατάστασης"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:141
+msgid ""
+"Available when the carrier API supports it. The plugin will only show it "
+"when supported."
+msgstr ""
+"Διαθέσιμο όταν το API του φορέα το υποστηρίζει. Το πρόσθετο θα το εμφανίζει "
+"μόνο όταν υποστηρίζεται."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:73
+msgid "Billing Code"
+msgstr "Κωδικός χρέωσης"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:89
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:123
+msgid ""
+"Cancel a previously created shipment directly from the WooCommerce order "
+"page."
+msgstr ""
+"Ακύρωση μιας αποστολής που έχει δημιουργηθεί προηγουμένως απευθείας από τη "
+"σελίδα παραγγελίας του WooCommerce."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:108
+#: admin/class-woo-zo-myacs-lite-settings.php:120
+msgid "Cancel Voucher"
+msgstr "Ακύρωση Voucher"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:85
+msgid "Cancel voucher"
+msgstr "Ακύρωση Voucher"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:93
+msgid "Clear Generated PDFs"
+msgstr "Εκκαθάριση παραγόμενων PDF"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:90
+msgid "Close"
+msgstr "Κλείστε το"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:138
+msgid "Close Day"
+msgstr "Κλείσιμο ημέρας"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:163
+msgid "Close day completed."
+msgstr "Ολοκληρώθηκε το κλείσιμο της ημέρας."
+
+#: admin/class-woo-zo-myacs-lite-order-list.php:17
+msgid "Close day is available from the MyACS Lite settings page."
+msgstr ""
+"Το κλείσιμο της ημέρας είναι διαθέσιμο από τη σελίδα ρυθμίσεων του MyACS "
+"Lite."
+
+#: admin/class-woo-zo-myacs-lite-admin.php:185
+#: admin/class-woo-zo-myacs-lite-admin.php:255
+msgid "Close day is not supported."
+msgstr "Δεν υποστηρίζεται το κλείσιμο της ημέρας."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:70
+msgid "COD"
+msgstr "COD"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:60
+msgid "COD option saved."
+msgstr "Η επιλογή COD αποθηκεύτηκε."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:90
+msgid "Comment"
+msgstr "Σχόλιο"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:63
+msgid "Comment saved."
+msgstr "Το σχόλιο αποθηκεύτηκε."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:71
+msgid "Company ID"
+msgstr "Αναγνωριστικό εταιρείας"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:67
+msgid "Company Name"
+msgstr "Όνομα εταιρείας"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:72
+msgid "Company Password"
+msgstr "Κωδικός πρόσβασης εταιρείας"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:80
+msgid ""
+"Configure the single-order voucher tools and the ACS print template used "
+"when generating labels."
+msgstr ""
+"Διαμορφώστε τα εργαλεία παραστατικών μιας παραγγελίας και το πρότυπο "
+"εκτύπωσης ACS που χρησιμοποιείται κατά τη δημιουργία ετικετών."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:99
+#: admin/class-woo-zo-myacs-lite-settings.php:114
+msgid "Create & Print Voucher"
+msgstr "Εκτύπωση Voucher"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:117
+msgid ""
+"Create a shipment from the order screen and open the generated PDF label in "
+"a new tab for immediate printing."
+msgstr ""
+"Δημιουργήστε μια αποστολή από την οθόνη παραγγελίας και ανοίξτε την ετικέτα "
+"PDF που δημιουργήθηκε σε νέα καρτέλα για άμεση εκτύπωση."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:63
+msgid "Credentials"
+msgstr "Διαπιστευτήρια"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:162
+msgid "CRON Tracking"
+msgstr "Παρακολούθηση CRON"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:174
+msgid "Customer Emails"
+msgstr "Ηλεκτρονικά μηνύματα πελατών"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:153
+msgid ""
+"Delete all locally stored generated PDFs from the settings page whenever you "
+"want."
+msgstr ""
+"Διαγράψτε όλα τα τοπικά αποθηκευμένα παραγόμενα PDF από τη σελίδα ρυθμίσεων "
+"όποτε θέλετε."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:183
+msgid ""
+"Delete old generated PDF files automatically after the number of days you "
+"configure."
+msgstr ""
+"Διαγράψτε αυτόματα τα παλιά αρχεία PDF που δημιουργήθηκαν μετά από τον "
+"αριθμό ημερών που έχετε ρυθμίσει."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:758
+msgid "Delivered"
+msgstr "Παραδίδεται"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:109
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:94
+msgid "Download pickup list"
+msgstr "Κατεβάστε τη λίστα παραλαβής"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:135
+msgid ""
+"Edit COD, parcels, weight, comment and other supported carrier options "
+"inline on each order."
+msgstr ""
+"Επεξεργαστείτε την αντικαταβολή, τα δέματα, το βάρος, το σχόλιο και άλλες "
+"υποστηριζόμενες επιλογές μεταφορέα σε κάθε παραγγελία."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:106
+msgid "Feature / Function"
+msgstr "Χαρακτηριστικό / Λειτουργία"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:93
+msgid "Generated PDFs"
+msgstr "Παραγόμενα PDF"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:178
+msgid "Generated PDFs were deleted."
+msgstr "Τα παραγόμενα PDF διαγράφηκαν."
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://01generator.com"
+msgstr "https://01generator.com"
+
+#. Description of the plugin
+msgid ""
+"Initial MyACS Lite WooCommerce carrier plugin scaffold for voucher creation, "
+"printing, canceling, and manual tracking."
+msgstr ""
+"Αρχικά MyACS Lite WooCommerce carrier plugin ικριώματα για τη δημιουργία "
+"παραστατικών, την εκτύπωση, την ακύρωση και τη χειροκίνητη παρακολούθηση."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:121
+msgid "Invalid response received from ACS."
+msgstr "Λάθος απάντηση που ελήφθη από το ACS."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:107
+msgid "Lite"
+msgstr "Lite"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:99
+msgid "Lite vs Pro"
+msgstr "Lite vs Pro"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:90
+msgid ""
+"Manage the locally generated voucher PDFs stored in the WordPress uploads "
+"folder."
+msgstr ""
+"Διαχειριστείτε τα τοπικά παραγόμενα PDF παραστατικών που είναι αποθηκευμένα "
+"στο φάκελο WordPress uploads."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:181
+msgid "Manual only"
+msgstr "Μόνο χειροκίνητο"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:150
+msgid "Manual PDF Cleanup"
+msgstr "Χειροκίνητος καθαρισμός PDF"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:126
+msgid "Manual Tracking"
+msgstr "Χειροκίνητη παρακολούθηση"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:156
+msgid "Mass Printing"
+msgstr "Μαζική εκτύπωση"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:91
+#: admin/class-woo-zo-myacs-lite-admin.php:169
+msgid "MyACS - Close the Day"
+msgstr "MyACS - Κλείστε την ημέρα"
+
+#. Name of the plugin
+#: admin/class-woo-zo-myacs-lite-admin.php:107
+#: admin/class-woo-zo-myacs-lite-admin.php:108
+#: admin/class-woo-zo-myacs-lite-admin.php:123
+#: admin/class-woo-zo-myacs-lite-settings.php:52
+#: admin/class-woo-zo-myacs-lite-settings.php:54
+msgid "MyACS Lite"
+msgstr "MyACS Lite"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:157
+#: admin/class-woo-zo-myacs-lite-settings.php:163
+#: admin/class-woo-zo-myacs-lite-settings.php:169
+#: admin/class-woo-zo-myacs-lite-settings.php:175
+msgid "No"
+msgstr "Όχι"
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:762
+msgid "No tracking details were returned by ACS."
+msgstr "Η ACS δεν επέστρεψε λεπτομέρειες παρακολούθησης."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:759
+msgid "NOT Delivered."
+msgstr "ΔΕΝ παραδίδεται."
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:56
+msgid "Nothing was saved."
+msgstr "Τίποτα δεν σώθηκε."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:39
+msgid "Order context could not be resolved."
+msgstr "Το πλαίσιο της παραγγελίας δεν μπόρεσε να επιλυθεί."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:132
+msgid "Order Page Shipment Options"
+msgstr "Σελίδα παραγγελίας Επιλογές αποστολής"
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:74
+msgid "Parcels"
+msgstr "Πακέτα"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:61
+msgid "Parcels saved."
+msgstr "Σώζονται δέματα."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:89
+msgid "PDF Settings"
+msgstr "Ρυθμίσεις PDF"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:179
+#: admin/class-woo-zo-myacs-lite-ajax.php:36
+msgid "Permission denied."
+msgstr "Άδεια απορρίπτεται."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:159
+msgid ""
+"Print multiple selected orders in batches and generate one final merged PDF "
+"file."
+msgstr ""
+"Εκτυπώστε πολλαπλές επιλεγμένες παραγγελίες σε παρτίδες και δημιουργήστε ένα "
+"τελικό συγχωνευμένο αρχείο PDF."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:83
+msgid "Print Template"
+msgstr "Πρότυπο εκτύπωσης"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:144
+msgid "Print Template Choice"
+msgstr "Επιλογή προτύπου εκτύπωσης"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:108
+msgid "Pro"
+msgstr "Pro"
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:84
+msgid "Reception Delivery"
+msgstr "Παράδοση υποδοχής"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:65
+msgid "Reception delivery option saved."
+msgstr "Η επιλογή παράδοσης υποδοχής αποθηκεύτηκε."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:54
+msgid "Reference"
+msgstr "Αναφορά"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:129
+msgid ""
+"Request and store the latest carrier tracking message manually from the "
+"order page."
+msgstr ""
+"Ζητήστε και αποθηκεύστε χειροκίνητα το τελευταίο μήνυμα παρακολούθησης του "
+"μεταφορέα από τη σελίδα παραγγελίας."
+
+#: admin/class-woo-zo-myacs-lite-admin.php:95
+msgid "Request failed."
+msgstr "Το αίτημα απέτυχε."
+
+#: admin/class-woo-zo-myacs-lite-admin.php:92
+msgid "Requesting the ACS pickup list..."
+msgstr "Ζητώντας τη λίστα παραλαβής ACS..."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:85
+msgid "Return Voucher"
+msgstr "Κουπόνι επιστροφής"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:66
+msgid "Return voucher option saved."
+msgstr "Αποθηκευμένη επιλογή Voucher επιστροφής."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:165
+msgid ""
+"Run scheduled tracking updates through a tokenized endpoint and optional "
+"server cron job."
+msgstr ""
+"Εκτελέστε προγραμματισμένες ενημερώσεις εντοπισμού μέσω ενός τερματικού "
+"σημείου με κωδικό και μιας προαιρετικής εργασίας cron του διακομιστή."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:83
+msgid "Saturday Delivery"
+msgstr "Παράδοση Σάββατο"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:64
+msgid "Saturday delivery option saved."
+msgstr "Η επιλογή παράδοσης του Σαββάτου αποθηκεύτηκε."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:199
+msgid "Save Settings"
+msgstr "Αποθήκευση ρυθμίσεων"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:69
+msgid "Saved."
+msgstr "Αποθηκεύτηκε."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:147
+msgid ""
+"Select the label output format, such as thermal or A4, from the plugin "
+"settings."
+msgstr ""
+"Επιλέξτε τη μορφή εξόδου της ετικέτας, όπως θερμική ή A4, από τις ρυθμίσεις "
+"του πρόσθετου."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:177
+msgid ""
+"Send in-transit and thank-you emails using WooCommerce email classes and "
+"automation rules."
+msgstr ""
+"Στείλτε μηνύματα ηλεκτρονικού ταχυδρομείου κατά τη μεταφορά και ευχαριστήρια "
+"μηνύματα ηλεκτρονικού ταχυδρομείου χρησιμοποιώντας κατηγορίες ηλεκτρονικού "
+"ταχυδρομείου και κανόνες αυτοματισμού του WooCommerce."
+
+#: admin/class-woo-zo-myacs-lite-admin.php:224
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:42
+msgid "Settings saved."
+msgstr "Οι ρυθμίσεις αποθηκεύονται."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:55
+msgid ""
+"Single-order shipment workflow for WooCommerce with a clean upgrade path to "
+"the full Pro feature set."
+msgstr ""
+"Ροή εργασιών αποστολής μίας παραγγελίας για το WooCommerce με καθαρή πορεία "
+"αναβάθμισης προς το πλήρες σύνολο λειτουργιών Pro."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:64
+msgid ""
+"Store the ACS web service credentials required to create, print and cancel "
+"vouchers."
+msgstr ""
+"Αποθηκεύστε τα διαπιστευτήρια της διαδικτυακής υπηρεσίας ACS που απαιτούνται "
+"για τη δημιουργία, την εκτύπωση και την ακύρωση παραστατικών."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:93
+msgid "Stored files: %d"
+msgstr "Αποθηκευμένα αρχεία: %d"
+
+#: admin/class-woo-zo-myacs-lite-admin.php:193
+msgid "The ACS pickup list could not be generated."
+msgstr "Η λίστα παραλαβής ACS δεν μπόρεσε να δημιουργηθεί."
+
+#: admin/class-woo-zo-myacs-lite-admin.php:93
+msgid "The ACS pickup list is ready."
+msgstr "Η λίστα παραλαβής ACS είναι έτοιμη."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:100
+msgid ""
+"The Lite version already covers the single-order workflow. Use this table to "
+"see exactly what expands in Pro."
+msgstr ""
+"Η έκδοση Lite καλύπτει ήδη τη ροή εργασιών μίας παραγγελίας. Χρησιμοποιήστε "
+"αυτόν τον πίνακα για να δείτε τι ακριβώς επεκτείνεται στην Pro."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:531
+msgid "The order could not be loaded."
+msgstr "Η παραγγελία δεν μπόρεσε να φορτωθεί."
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:97
+msgid "The voucher PDF could not be generated."
+msgstr "Το παραστατικό PDF δεν μπόρεσε να δημιουργηθεί."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:693
+msgid "The voucher PDF file could not be written."
+msgstr "Δεν κατέστη δυνατή η εγγραφή του αρχείου PDF του παραστατικού."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:716
+msgid "There is no reference to cancel."
+msgstr "Δεν υπάρχει καμία αναφορά σε ακύρωση."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:637
+msgid "There is no reference to print."
+msgstr "Δεν υπάρχει καμία αναφορά στην εκτύπωση."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:737
+msgid "There is no reference to track."
+msgstr "Δεν υπάρχει καμία αναφορά στην πίστα."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:83
+msgid "Thermal"
+msgstr "Θερμική"
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:104
+msgid "Track Voucher"
+msgstr "Track Voucher"
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:64
+msgid "Tracking Status"
+msgstr "Κατάσταση παρακολούθησης"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:171
+msgid ""
+"Update WooCommerce order statuses automatically when shipments are created, "
+"delivered, or marked late."
+msgstr ""
+"Ενημερώστε αυτόματα τις καταστάσεις των παραγγελιών του WooCommerce όταν "
+"δημιουργούνται, παραδίδονται ή χαρακτηρίζονται καθυστερημένες οι αποστολές."
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:116
+#: admin/class-woo-zo-myacs-lite-settings.php:190
+msgid ""
+"Upgrade now and send automated email with the voucher number. Track your "
+"orders via CRON and mass print multiple vouchers in a few clicks."
+msgstr ""
+"Αναβαθμίστε τώρα και στείλτε αυτοματοποιημένο email με τον αριθμό του "
+"voucher. Παρακολουθήστε τις παραγγελίες σας μέσω CRON και εκτυπώστε μαζικά "
+"πολλαπλά voucher με λίγα κλικ."
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:123
+msgid "Voucher canceled."
+msgstr "Το κουπόνι ακυρώθηκε."
+
+#: includes/class-woo-zo-myacs-lite-acs-adapter.php:625
+msgid "Voucher created successfully."
+msgstr "Το κουπόνι δημιουργήθηκε με επιτυχία."
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:101
+msgid "Voucher created."
+msgstr "Δημιουργήθηκε κουπόνι."
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:101
+msgid "Voucher reprinted."
+msgstr "Ανατύπωση παραστατικού."
+
+#: admin/class-woo-zo-myacs-lite-settings.php:79
+msgid "Voucher Settings"
+msgstr "Ρυθμίσεις Voucher"
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:78
+msgid "Weight"
+msgstr "Βάρος"
+
+#: admin/class-woo-zo-myacs-lite-ajax.php:62
+msgid "Weight saved."
+msgstr "Εξοικονόμηση βάρους."
+
+#: admin/class-woo-zo-myacs-lite-admin.php:88
+#: admin/class-woo-zo-myacs-lite-settings.php:115
+#: admin/class-woo-zo-myacs-lite-settings.php:116
+#: admin/class-woo-zo-myacs-lite-settings.php:121
+#: admin/class-woo-zo-myacs-lite-settings.php:122
+#: admin/class-woo-zo-myacs-lite-settings.php:127
+#: admin/class-woo-zo-myacs-lite-settings.php:128
+#: admin/class-woo-zo-myacs-lite-settings.php:133
+#: admin/class-woo-zo-myacs-lite-settings.php:134
+#: admin/class-woo-zo-myacs-lite-settings.php:145
+#: admin/class-woo-zo-myacs-lite-settings.php:146
+#: admin/class-woo-zo-myacs-lite-settings.php:151
+#: admin/class-woo-zo-myacs-lite-settings.php:152
+#: admin/class-woo-zo-myacs-lite-settings.php:158
+#: admin/class-woo-zo-myacs-lite-settings.php:164
+#: admin/class-woo-zo-myacs-lite-settings.php:170
+#: admin/class-woo-zo-myacs-lite-settings.php:176
+msgid "Yes"
+msgstr "Ναι"
+
+#: admin/class-woo-zo-myacs-lite-settings.php:139
+#: admin/class-woo-zo-myacs-lite-settings.php:140
+msgid "Yes*"
+msgstr "Ναι*"
+
+#: admin/class-woo-zo-myacs-lite-order-metabox.php:119
+#: admin/class-woo-zo-myacs-lite-settings.php:193
+msgid "You can find the Pro version here."
+msgstr "Μπορείτε να βρείτε την έκδοση Pro εδώ."

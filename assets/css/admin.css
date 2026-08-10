@@ -1,0 +1,415 @@
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-message {
+    display: none;
+    margin-top: 0;
+    font-weight: 600;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-message.notice {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-message.notice-success {
+    background: linear-gradient(135deg, #e7f8ee 0%, #d9f3e4 100%);
+    border-color: #7cc79a;
+    color: #0f5132;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-message.notice-error {
+    background: linear-gradient(135deg, #fdecec 0%, #fadede 100%);
+    border-color: #e28b8b;
+    color: #8a1f1f;
+}
+
+#woo-zo-myacs-lite-metabox {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+    max-width: 100%;
+}
+
+#woo-zo-myacs-lite-metabox > * {
+    min-width: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-summary {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: grid;
+    gap: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-summary-row {
+    display: grid;
+    gap: 4px;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-summary-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #646970;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-reference,
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-tracking {
+    font-weight: 600;
+    color: #1d2327;
+    word-break: break-word;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-reference-link {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-reference-link:hover,
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-reference-link:focus {
+    color: #135e96;
+    text-decoration: underline;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-field-stack {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-inline-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-field-box,
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-comment-field {
+    display: grid;
+    gap: 6px;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-field-label {
+    font-weight: 600;
+    color: #1d2327;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-field-label-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-checkline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-checkline input {
+    margin: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-field-box input,
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-comment-field textarea {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-actions {
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-actions-secondary {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-action {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-action span {
+    min-width: 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-upgrade-note {
+    padding: 12px 14px;
+    border: 1px solid #e0c46c;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #fff8da 0%, #fff1b8 100%);
+    color: #5f4b00;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-upgrade-note-main,
+.wp-zo-cfl-upgrade-note-settings .wp-zo-cfl-upgrade-note-main {
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-upgrade-note-link,
+.wp-zo-cfl-upgrade-note-settings .wp-zo-cfl-upgrade-note-link {
+    margin: 8px 0 0;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-upgrade-note-link a,
+.wp-zo-cfl-upgrade-note-settings .wp-zo-cfl-upgrade-note-link a {
+    color: #5f4b00;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-action-primary {
+    min-height: 42px;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-action-cancel {
+    border-color: #d63638;
+    color: #b32d2e;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-action-cancel:hover,
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-action-cancel:focus {
+    border-color: #b32d2e;
+    color: #8a2424;
+}
+
+.wp-zo-cfl-button-icon {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+}
+
+.wp-zo-cfl-settings-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wp-zo-cfl-settings-submit .wp-zo-cfl-button-icon {
+    position: relative;
+    top: 1px;
+}
+
+#wp-zo-cfl-settings-message .notice {
+    margin: 10px 0 0;
+}
+
+.wp-zo-cfl-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 10px 0 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+    border: 1px solid #dcdcde;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.wp-zo-cfl-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex: 0 0 56px;
+    max-width: 56px;
+}
+
+.wp-zo-cfl-header-copy h1 {
+    margin: 0 0 6px;
+}
+
+.wp-zo-cfl-header-copy p {
+    margin: 0;
+    color: #50575e;
+    font-size: 14px;
+}
+
+.wp-zo-cfl-settings-panels {
+    display: grid;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.wp-zo-cfl-panel {
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.wp-zo-cfl-panel-header {
+    padding: 16px 20px;
+    background: #f6f7f7;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.wp-zo-cfl-panel-header h2 {
+    margin: 0 0 4px;
+    font-size: 16px;
+}
+
+.wp-zo-cfl-panel-header p {
+    margin: 0;
+    color: #50575e;
+}
+
+.wp-zo-cfl-panel .form-table,
+.wp-zo-cfl-panel-body {
+    margin: 0;
+    padding: 6px 20px 16px;
+}
+
+.wp-zo-cfl-panel .form-table th,
+.wp-zo-cfl-panel .form-table td {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.wp-zo-cfl-panel .form-table td {
+    padding-right: 12px;
+}
+
+.wp-zo-cfl-panel .form-table th {
+    width: 220px;
+    padding-left: 12px;
+}
+
+.wp-zo-cfl-panel-accent .wp-zo-cfl-panel-header {
+    background: linear-gradient(135deg, #f0f6fc 0%, #eef8f7 100%);
+}
+
+.wp-zo-cfl-upgrade-note-settings {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border: 1px solid #e0c46c;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #fff8da 0%, #fff1b8 100%);
+    color: #5f4b00;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.wp-zo-cfl-pro-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.wp-zo-cfl-pro-table th,
+.wp-zo-cfl-pro-table td {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #dcdcde;
+}
+
+.wp-zo-cfl-pro-table thead th {
+    background: #f0f6fc;
+    font-weight: 700;
+}
+
+.wp-zo-cfl-pro-table tbody td:first-child {
+    width: 28%;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.wp-zo-cfl-pro-table tbody td:nth-child(2),
+.wp-zo-cfl-pro-table tbody td:nth-child(3) {
+    width: 12%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.wp-zo-cfl-update-logo {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.wp-zo-cfl-confirm {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+}
+
+.wp-zo-cfl-confirm-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(29, 35, 39, 0.48);
+}
+
+.wp-zo-cfl-confirm-dialog {
+    position: relative;
+    width: min(420px, calc(100% - 32px));
+    margin: 12vh auto 0;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.wp-zo-cfl-confirm-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.wp-zo-cfl-confirm-text {
+    margin: 0 0 18px;
+    color: #3c434a;
+    line-height: 1.5;
+}
+
+.wp-zo-cfl-confirm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.wp-zo-cfl-close-day-body .notice {
+    margin: 0;
+}
+
+.wp-zo-cfl-close-day-link-wrap {
+    margin: 14px 0 0;
+}
