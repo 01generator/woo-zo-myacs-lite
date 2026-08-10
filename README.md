@@ -112,7 +112,7 @@ This will:
 
 ## Upgrade
 
-A Pro version is planned for stores that need advanced workflow features such as:
+A Pro version is available for stores that need advanced workflow features such as:
 
 - mass printing
 - CRON tracking
