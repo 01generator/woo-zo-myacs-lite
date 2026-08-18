@@ -120,6 +120,10 @@ class Woo_Zo_Myacs_Lite_Order_Metabox
                     </p>
                 </div>
             <?php endif; ?>
+            <div class="wp-zo-cfl-loading" role="status" aria-live="polite" hidden>
+                <span class="wp-zo-cfl-loading-circle" aria-hidden="true"></span>
+                <span><?php esc_html_e('Processing request...', 'woo-zo-myacs-lite'); ?></span>
+            </div>
             <div class="wp-zo-cfl-message"></div>
         </div>
         <?php

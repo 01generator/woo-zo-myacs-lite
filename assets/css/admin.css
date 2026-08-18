@@ -208,6 +208,48 @@
     color: #8a2424;
 }
 
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-loading[hidden] {
+    display: none !important;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid #9ec5e8;
+    border-radius: 7px;
+    background: #f0f7fc;
+    color: #135e96;
+    font-weight: 600;
+}
+
+#woo-zo-myacs-lite-metabox .wp-zo-cfl-loading-circle {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    box-sizing: border-box;
+    border: 3px solid rgba(19, 94, 150, 0.25);
+    border-top-color: #135e96;
+    border-radius: 50%;
+    animation: woo-zo-myacs-lite-spin 0.75s linear infinite;
+}
+
+#woo-zo-myacs-lite-metabox.is-busy .wp-zo-cfl-field,
+#woo-zo-myacs-lite-metabox.is-busy .wp-zo-cfl-action {
+    cursor: wait;
+}
+
+@keyframes woo-zo-myacs-lite-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .wp-zo-cfl-button-icon {
     width: 16px;
     height: 16px;

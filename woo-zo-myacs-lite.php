@@ -3,7 +3,7 @@
  * Plugin Name:       MyACS Lite
  * Plugin URI:        https://github.com/01generator/woo-zo-myacs-lite
  * Description:       Initial MyACS Lite WooCommerce carrier plugin scaffold for voucher creation, printing, canceling, and manual tracking.
- * Version:           0.1.15
+ * Version:           0.1.17
  * Author:            01generator
  * Author URI:        https://01generator.com
  * License:           GPL-2.0+
@@ -16,13 +16,26 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('Woo_Zo_Myacs_Lite_VERSION', '0.1.15');
+define('Woo_Zo_Myacs_Lite_VERSION', '0.1.17');
 define('Woo_Zo_Myacs_Lite_SLUG', 'woo-zo-myacs-lite');
 define('Woo_Zo_Myacs_Lite_FILE', __FILE__);
 define('Woo_Zo_Myacs_Lite_PATH', plugin_dir_path(__FILE__));
 define('Woo_Zo_Myacs_Lite_URL', plugin_dir_url(__FILE__));
 define('Woo_Zo_Myacs_Lite_PRO_URL_EN', 'https://01generator.com/wordpress-plugins/woocommerce-plugins/greek-woocommerce-plugins/myacs-pro-for-woocommerce');
 define('Woo_Zo_Myacs_Lite_PRO_URL_EL', 'https://01generator.com/el/wordpress-plugins/woocommerce-plugins/ellinika-woocommerce-plugins/myacs-pro-for-woocommerce');
+
+/**
+ * Declare compatibility with WooCommerce High-Performance Order Storage.
+ */
+add_action('before_woocommerce_init', function () {
+    if (class_exists('Automattic\\WooCommerce\\Utilities\\FeaturesUtil')) {
+        Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+            'custom_order_tables',
+            Woo_Zo_Myacs_Lite_FILE,
+            true
+        );
+    }
+});
 
 /**
  * Return the localized public product URL for MyACS Pro.

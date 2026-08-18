@@ -14,7 +14,15 @@ class Woo_Zo_Myacs_Lite_Order_Meta
      */
     public function set_tracking_code($order_id, $tracking_code)
     {
-        update_post_meta($order_id, '_woo_zo_myacs_reference', sanitize_text_field($tracking_code));
+        $value = sanitize_text_field($tracking_code);
+        $order = function_exists('wc_get_order') ? wc_get_order($order_id) : false;
+
+        if (!$order instanceof WC_Order) {
+            return;
+        }
+
+        $order->update_meta_data('_woo_zo_myacs_reference', $value);
+        $order->save_meta_data();
     }
 
     /**
@@ -22,7 +30,14 @@ class Woo_Zo_Myacs_Lite_Order_Meta
      */
     public function clear_tracking_code($order_id)
     {
-        delete_post_meta($order_id, '_woo_zo_myacs_reference');
+        $order = function_exists('wc_get_order') ? wc_get_order($order_id) : false;
+
+        if (!$order instanceof WC_Order) {
+            return;
+        }
+
+        $order->delete_meta_data('_woo_zo_myacs_reference');
+        $order->save_meta_data();
     }
 
     /**
@@ -30,7 +45,16 @@ class Woo_Zo_Myacs_Lite_Order_Meta
      */
     public function set_tracking_summary($order_id, $status, $history)
     {
-        update_post_meta($order_id, '_woo_zo_myacs_tracking_status', sanitize_text_field($status));
-        update_post_meta($order_id, '_woo_zo_myacs_tracking_history', sanitize_text_field($history));
+        $status = sanitize_text_field($status);
+        $history = sanitize_text_field($history);
+        $order = function_exists('wc_get_order') ? wc_get_order($order_id) : false;
+
+        if (!$order instanceof WC_Order) {
+            return;
+        }
+
+        $order->update_meta_data('_woo_zo_myacs_tracking_status', $status);
+        $order->update_meta_data('_woo_zo_myacs_tracking_history', $history);
+        $order->save_meta_data();
     }
 }

@@ -1,6 +1,7 @@
 jQuery(function ($) {
     var messageTimer = null;
     var actionInFlight = false;
+    var pendingOrderRequests = 0;
     var config = window.wooZoMyacsLite || {};
     var strings = config.i18n || {};
     var $orderWrap = $('#woo-zo-myacs-lite-metabox[data-plugin="woo-zo-myacs-lite"]');
@@ -153,6 +154,24 @@ jQuery(function ($) {
         return $orderWrap.length ? $orderWrap : $('#woo-zo-myacs-lite-metabox[data-plugin="woo-zo-myacs-lite"]');
     }
 
+    function beginOrderRequest($wrap) {
+        pendingOrderRequests += 1;
+        $wrap.addClass('is-busy').attr('aria-busy', 'true');
+        $wrap.find('.wp-zo-cfl-field, .wp-zo-cfl-action').prop('disabled', true);
+        $wrap.find('.wp-zo-cfl-loading').prop('hidden', false);
+    }
+
+    function endOrderRequest($wrap) {
+        pendingOrderRequests = Math.max(0, pendingOrderRequests - 1);
+        if (pendingOrderRequests > 0) {
+            return;
+        }
+
+        $wrap.removeClass('is-busy').attr('aria-busy', 'false');
+        $wrap.find('.wp-zo-cfl-field, .wp-zo-cfl-action').prop('disabled', false);
+        $wrap.find('.wp-zo-cfl-loading').prop('hidden', true);
+    }
+
     function setReference($wrap, reference) {
         var $holder = $wrap.find('.wp-zo-cfl-reference-wrap');
         if (!$holder.length) {
@@ -181,7 +200,7 @@ jQuery(function ($) {
         }
 
         actionInFlight = true;
-        $wrap.find('.wp-zo-cfl-action').prop('disabled', true);
+        beginOrderRequest($wrap);
 
         $.post(config.ajaxUrl, {
             action: map[actionName],
@@ -205,26 +224,34 @@ jQuery(function ($) {
             showMessage($wrap.find('.wp-zo-cfl-message'), strings.requestFailed, true);
         }).always(function () {
             actionInFlight = false;
-            $wrap.find('.wp-zo-cfl-action').prop('disabled', false);
+            endOrderRequest($wrap);
         });
     }
 
     getOrderWrap().on('change', '.wp-zo-cfl-field', function (event) {
         event.stopPropagation();
 
+        var $field = $(this);
         var $wrap = getOrderWrap();
+        var field = $field.data('field');
+        var value = $field.is(':checkbox') ? ($field.is(':checked') ? 1 : 0) : $field.val();
         if (!$wrap.length) {
             return;
         }
 
+        beginOrderRequest($wrap);
         $.post(config.ajaxUrl, {
             action: 'woo_zo_myacs_lite_save_options',
             nonce: config.nonce,
             order_id: $wrap.data('order-id'),
-            field: $(this).data('field'),
-            value: $(this).is(':checkbox') ? ($(this).is(':checked') ? 1 : 0) : $(this).val()
+            field: field,
+            value: value
         }).done(function (response) {
             showMessage($wrap.find('.wp-zo-cfl-message'), response.data.message, !response.success);
+        }).fail(function () {
+            showMessage($wrap.find('.wp-zo-cfl-message'), strings.requestFailed, true);
+        }).always(function () {
+            endOrderRequest($wrap);
         });
     });
 
