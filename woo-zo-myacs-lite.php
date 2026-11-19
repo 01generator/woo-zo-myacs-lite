@@ -2,12 +2,16 @@
 /**
  * Plugin Name:       MyACS Lite
  * Plugin URI:        https://github.com/01generator/woo-zo-myacs-lite
- * Description:       Initial MyACS Lite WooCommerce carrier plugin scaffold for voucher creation, printing, canceling, and manual tracking.
- * Version:           0.1.17
+ * Description:       ACS Courier shipping for WooCommerce: create, print and cancel vouchers, track shipments and issue the "close the day" pickup list from the order page.
+ * Version:           0.1.20
  * Author:            01generator
  * Author URI:        https://01generator.com
  * License:           GPL-2.0+
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.txt
+ * Requires at least: 6.2
+ * Requires PHP:      7.4
+ * Requires Plugins:  woocommerce
+ * Update URI:        https://01generator.com/
  * Text Domain:       woo-zo-myacs-lite
  * Domain Path:       /languages
  */
@@ -16,7 +20,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('Woo_Zo_Myacs_Lite_VERSION', '0.1.17');
+define('Woo_Zo_Myacs_Lite_VERSION', '0.1.20');
 define('Woo_Zo_Myacs_Lite_SLUG', 'woo-zo-myacs-lite');
 define('Woo_Zo_Myacs_Lite_FILE', __FILE__);
 define('Woo_Zo_Myacs_Lite_PATH', plugin_dir_path(__FILE__));
@@ -68,10 +72,10 @@ register_deactivation_hook(__FILE__, array('Woo_Zo_Myacs_Lite_Deactivator', 'dea
  *
  * @return void
  */
-function run_Woo_Zo_Myacs_Lite()
+function woo_zo_myacs_lite_run()
 {
     $plugin = new Woo_Zo_Myacs_Lite();
     $plugin->run();
 }
 
-run_Woo_Zo_Myacs_Lite();
+woo_zo_myacs_lite_run();

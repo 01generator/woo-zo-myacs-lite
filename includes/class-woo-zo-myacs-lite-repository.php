@@ -84,6 +84,7 @@ class Woo_Zo_Myacs_Lite_Repository
 
         global $wpdb;
         $defaults = $this->get_default_row_data($order_id);
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
         $wpdb->insert(
             $this->table,
             array(
@@ -117,7 +118,8 @@ class Woo_Zo_Myacs_Lite_Repository
     {
         global $wpdb;
 
-        return $wpdb->get_row($wpdb->prepare("SELECT * FROM {$this->table} WHERE id_order = %d", $order_id), ARRAY_A);
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
+        return $wpdb->get_row($wpdb->prepare('SELECT * FROM %i WHERE id_order = %d', $this->table, $order_id), ARRAY_A);
     }
 
     /**
@@ -152,6 +154,7 @@ class Woo_Zo_Myacs_Lite_Repository
 
         $update['date_updated'] = current_time('mysql');
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
         return false !== $wpdb->update($this->table, $update, array('id_order' => (int) $order_id));
     }
 
@@ -162,6 +165,7 @@ class Woo_Zo_Myacs_Lite_Repository
     {
         global $wpdb;
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
         return false !== $wpdb->update(
             $this->table,
             array(
@@ -180,6 +184,7 @@ class Woo_Zo_Myacs_Lite_Repository
     {
         global $wpdb;
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
         return false !== $wpdb->update(
             $this->table,
             array(
@@ -203,14 +208,17 @@ class Woo_Zo_Myacs_Lite_Repository
             return array();
         }
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
         $order_ids = $wpdb->get_col(
             $wpdb->prepare(
-                "SELECT id_order FROM {$this->table} WHERE reference = %s",
+                'SELECT id_order FROM %i WHERE reference = %s',
+                $this->table,
                 $reference
             )
         );
 
         if (!empty($order_ids)) {
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
             $wpdb->update(
                 $this->table,
                 array(
@@ -232,6 +240,7 @@ class Woo_Zo_Myacs_Lite_Repository
     {
         global $wpdb;
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own shipments table
         return false !== $wpdb->update(
             $this->table,
             array(

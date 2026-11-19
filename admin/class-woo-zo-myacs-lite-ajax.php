@@ -45,9 +45,10 @@ class Woo_Zo_Myacs_Lite_Ajax
     public function save_options()
     {
         $this->check_request();
-        $order_id = absint($_POST['order_id'] ?? 0);
-        $field = sanitize_key($_POST['field'] ?? '');
-        $value = wp_unslash($_POST['value'] ?? '');
+        $order_id = absint($_POST['order_id'] ?? 0); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- check_request() verified the nonce and the capability
+        $field = sanitize_key($_POST['field'] ?? ''); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- check_request() verified the nonce and the capability
+        $raw_value = wp_unslash($_POST['value'] ?? ''); // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- nonce + capability verified in check_request(); sanitised on the next line
+        $value = 'comment' === $field ? sanitize_textarea_field($raw_value) : sanitize_text_field($raw_value);
 
         $this->repository->ensure_order_row($order_id);
         $saved = $this->repository->save_order_options($order_id, array($field => $value));
@@ -75,7 +76,7 @@ class Woo_Zo_Myacs_Lite_Ajax
     public function create_print()
     {
         $this->check_request();
-        $order_id = absint($_POST['order_id'] ?? 0);
+        $order_id = absint($_POST['order_id'] ?? 0); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- check_request() verified the nonce and the capability
         $row = $this->repository->ensure_order_row($order_id);
         $reference = $row['reference'];
         $is_reprint = !empty($reference);
@@ -110,7 +111,7 @@ class Woo_Zo_Myacs_Lite_Ajax
     public function cancel()
     {
         $this->check_request();
-        $order_id = absint($_POST['order_id'] ?? 0);
+        $order_id = absint($_POST['order_id'] ?? 0); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- check_request() verified the nonce and the capability
         $row = $this->repository->ensure_order_row($order_id);
         $result = $this->adapter->cancel_shipment($row['reference']);
 
@@ -129,7 +130,7 @@ class Woo_Zo_Myacs_Lite_Ajax
     public function track()
     {
         $this->check_request();
-        $order_id = absint($_POST['order_id'] ?? 0);
+        $order_id = absint($_POST['order_id'] ?? 0); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- check_request() verified the nonce and the capability
         $row = $this->repository->ensure_order_row($order_id);
         $result = $this->adapter->track_shipment($row['reference']);
 

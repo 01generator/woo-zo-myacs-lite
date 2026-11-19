@@ -83,6 +83,7 @@ class Woo_Zo_Myacs_Lite_Admin
             'logoUrl' => Woo_Zo_Myacs_Lite_URL . 'assets/images/logo-128x128.png',
             'i18n' => array(
                 'cancelTitle' => __('Cancel voucher', 'woo-zo-myacs-lite'),
+                /* translators: %s: voucher number */
                 'cancelMessage' => __('Are you sure you want to cancel voucher #%s?', 'woo-zo-myacs-lite'),
                 'cancelMessageEmpty' => __('Are you sure you want to cancel this voucher?', 'woo-zo-myacs-lite'),
                 'confirmYes' => __('Yes', 'woo-zo-myacs-lite'),

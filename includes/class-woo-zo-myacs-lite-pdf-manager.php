@@ -60,7 +60,7 @@ class Woo_Zo_Myacs_Lite_Pdf_Manager
             file_put_contents($index, "<?php\n// Silence is golden.\n");
         }
 
-        return is_writable($dir);
+        return wp_is_writable($dir);
     }
 
     /**
@@ -94,7 +94,8 @@ class Woo_Zo_Myacs_Lite_Pdf_Manager
 
         $deleted = 0;
         foreach (glob($this->get_storage_dir() . '*.pdf') as $file) {
-            if (@unlink($file)) {
+            wp_delete_file($file);
+            if (!file_exists($file)) {
                 $deleted++;
             }
         }

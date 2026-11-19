@@ -90,7 +90,11 @@ class Woo_Zo_Myacs_Lite_Settings
                             <p><?php esc_html_e('Manage the locally generated voucher PDFs stored in the WordPress uploads folder.', 'woo-zo-myacs-lite'); ?></p>
                         </div>
                         <table class="form-table">
-                            <tr><th><?php esc_html_e('Generated PDFs', 'woo-zo-myacs-lite'); ?></th><td><p><?php echo esc_html(sprintf(__('Stored files: %d', 'woo-zo-myacs-lite'), $this->pdf_manager->count_files())); ?></p><p><button type="button" class="button" id="wp-zo-cfl-clear-pdfs"><?php esc_html_e('Clear Generated PDFs', 'woo-zo-myacs-lite'); ?></button></p></td></tr>
+                            <?php
+                            /* translators: %d: number of generated PDF files kept in the uploads folder */
+                            $wzml_stored = sprintf(__('Stored files: %d', 'woo-zo-myacs-lite'), $this->pdf_manager->count_files());
+                            ?>
+                            <tr><th><?php esc_html_e('Generated PDFs', 'woo-zo-myacs-lite'); ?></th><td><p><?php echo esc_html($wzml_stored); ?></p><p><button type="button" class="button" id="wp-zo-cfl-clear-pdfs"><?php esc_html_e('Clear Generated PDFs', 'woo-zo-myacs-lite'); ?></button></p></td></tr>
                         </table>
                     </div>
 

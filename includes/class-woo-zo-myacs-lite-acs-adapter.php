@@ -314,6 +314,11 @@ class Woo_Zo_Myacs_Lite_Acs_Adapter
                 'PDFData' => $payload->ACSOutputResponce->ACSValueOutput[0]->PDFData,
             ));
         }
+        if (empty($objects) && !empty($payload->ACSOutputResponce->ACSObjectOutput)) {
+            $objects = is_array($payload->ACSOutputResponce->ACSObjectOutput)
+                ? $payload->ACSOutputResponce->ACSObjectOutput
+                : array($payload->ACSOutputResponce->ACSObjectOutput);
+        }
 
         foreach ($objects as $object) {
             $pdf_data = '';
@@ -333,22 +338,13 @@ class Woo_Zo_Myacs_Lite_Acs_Adapter
                 continue;
             }
 
-            $saved = $this->pdf_manager->save_pdf('myacs-lite-close-day-' . gmdate('Y-m-d-H-i-s') . '.pdf', $binary);
+            // The random part keeps the stored list's address from being guessed by its date.
+            $saved = $this->pdf_manager->save_pdf('myacs-lite-close-day-' . gmdate('Y-m-d-H-i-s') . '-' . wp_generate_password(12, false) . '.pdf', $binary);
             if ($saved) {
                 $saved['success'] = true;
 
                 return $saved;
             }
-        }
-
-        $pickup_list_no = $this->extract_pickup_list_number($payload);
-        if ('' !== $pickup_list_no) {
-            return array(
-                'success'            => true,
-                'path'               => 'pickup-list-' . sanitize_file_name($pickup_list_no) . '.pdf',
-                'url'                => $this->build_pickup_list_url($pickup_list_no),
-                'manifest_reference' => $pickup_list_no,
-            );
         }
 
         return array(
@@ -380,23 +376,6 @@ class Woo_Zo_Myacs_Lite_Acs_Adapter
         }
 
         return '';
-    }
-
-    /**
-     * Build the legacy ACS pickup-list URL for a returned list number.
-     */
-    protected function build_pickup_list_url($pickup_list_no)
-    {
-        $query = array(
-            'MainID'    => $this->options->get('company_id'),
-            'MainPass'  => $this->options->get('company_password'),
-            'UserID'    => $this->options->get('api_username'),
-            'UserPass'  => $this->options->get('api_password'),
-            'MassNumber'=> $pickup_list_no,
-            'DateParal' => gmdate('Y-m-d'),
-        );
-
-        return 'https://acs-eud2.acscourier.net/Eshops/getlist.aspx?' . http_build_query($query, '', '&', PHP_QUERY_RFC3986);
     }
 
     /**
@@ -809,6 +788,30 @@ class Woo_Zo_Myacs_Lite_Acs_Adapter
             }
         }
 
-        return $this->save_close_day_pdf($response['data']);
+        $saved = $this->save_close_day_pdf($response['data']);
+        $pickup_list_no = $this->extract_pickup_list_number($response['data']);
+        if (empty($saved['success']) && '' !== $pickup_list_no) {
+            // ACS_Issue_Pickup_List answers with the list number; ACS_Print_Pickup_List returns its PDF.
+            // (ACS switched off the old acs-eud2 list printout on 17 Nov 2026.)
+            $printed = $this->request(
+                'ACS_Print_Pickup_List',
+                array(
+                    'Language'    => 'GR',
+                    'Mass_Number' => $pickup_list_no,
+                    'Pickup_Date' => $parameters['Pickup_Date'],
+                )
+            );
+            if (empty($printed['success'])) {
+                return $printed;
+            }
+
+            $saved = $this->save_close_day_pdf($printed['data']);
+        }
+
+        if (!empty($saved['success']) && '' !== $pickup_list_no) {
+            $saved['manifest_reference'] = $pickup_list_no;
+        }
+
+        return $saved;
     }
 }
